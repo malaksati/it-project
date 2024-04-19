@@ -1,0 +1,258 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.search-header input::placeholder {
+    color: white;
+}
+nav {
+    transition: 0.3s linear;
+}
+nav.nav-active {
+    background-color:#00486c !important;
+    box-shadow: 5px -1px 12px -5px grey !important;
+}
+.h-fit-content {
+    height: fit-content;
+}
+.landing {
+    max-height: 100vh;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 38, 57, .3);
+}
+.services .box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00486c7a;
+}
+.landing .content {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background-color: var(--transparent-color);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+.landing .content h2 {
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 55px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+.landing .content h2 span {
+    color:  #ceb071;
+}
+.landing .content p {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.section-header {
+    color: #00486c;
+    margin: 1rem 0 0.5rem;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+}
+.section-header span {
+    color: #ceb071;
+}
+section > .container > p {
+    font-size: 20px;
+    color: #3a3d45;
+    font-weight: 200;
+}
+.top-center {
+    top: 50%;
+}
+.bg-main-color {
+    background-color: #00486c !important;
+}
+footer .social {
+    margin: 2rem auto;
+    width: fit-content;
+}
+.booking .reg-form h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: #00486c;
+}
+.booking .payment p {
+    font-size: 14px;
+}
+.about h1{
+    font-family: "Playfair Display", serif;
+}
+.about .info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: #00486c;
+}
+.about .info ul {
+    font-size: 15px;
+}
+.about .images .box {
+    margin-bottom: 30px;
+    background-color: white;
+    transition: 0.3s all;
+    position: relative;
+    width: 50%;
+}
+.about .images .image {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.about .images .image img {
+    width: 100%;
+    display: block;
+}
+.about .images .details {
+    background-color: #00486c;
+    color: white;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s cubic-bezier(.68,-.55,.265,1.55);
+}
+.about .images .details-text {
+    top: auto;
+    bottom: 100%;
+}
+.about .box:hover .details-text {
+    height: 70px;
+}
+.about .images .details-social {
+    top: 100%;
+    bottom: auto;
+}
+.about .box:hover .details-social {
+    height: 70px;
+}
+.about .images:hover .details-social .fa {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+}
+.about .images .details .inner {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.3;
+    padding: 15px 0;
+}
+.about .images a {
+    color: white;
+}
+.contact h1{
+    font-family: "Playfair Display", serif;
+}
+.contact .form-message {
+    background-color: #00486c;
+    color: white;
+}
+.contact .form-message h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+.contact .form-message form textarea {
+    height: 200px;
+    resize: none;
+}
+.contact .form-message input,
+.contact .form-message textarea {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.contact .info .box {
+    color:#00486c;
+}
+.contact .info .box h4 {
+    color: #00486c;
+    font-size: 19px;
+}
+.contact .info .box p {
+    line-height: 1.3;
+    color: #3a3d45;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+/* tablet and mobile screens */
+
+@media(max-width: 767px) {
+    .landing .content {
+        width: 100%;
+        padding: 10px;
+    }
+    .about .images {
+        flex-direction: column;
+    }
+    .about .images .box {
+        margin-bottom: 50px;
+    }
+    .about .team p {
+        padding: 10px 0 25px !important;
+    }
+    .about .info > div {
+        flex-direction: column;
+    }
+    .about .info > div.second {
+        flex-direction: column-reverse;
+    }
+    .about .info div img {
+        width: 100% !important;
+    }
+    .contact .form-message,
+    .contact .info {
+        width: 100% !important;
+    }
+    .contact form .name-email {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    } 
+    .contact .info {
+        flex-direction: column !important;
+    }
+}
+@media (max-width: 991px){
+    .landing img {
+        height: 100vh;
+    }
+    .landing .content h2 {
+        font-size: 35px !important;
+    }
+    .landing .content p {
+        width: 75% !important;
+    }
+    .landing a {
+        padding: 0.6rem !important;
+        width: 35% !important;
+    }
+    .booking .info-reg {
+        flex-direction: column;
+    }
+    .home .cards {
+        flex-direction: column !important;
+    }
+}
