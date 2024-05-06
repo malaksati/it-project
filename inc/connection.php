@@ -1,7 +1,7 @@
 <?php
     $host="localhost";
-    $user="malaksati";
-    $pw="malak1Sati1@";
+    $user="root";
+    $pw="";
     $db="hotel_it";
     // Create connection
     $conn = mysqli_connect($host, $user, $pw);
